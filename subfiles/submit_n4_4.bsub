@@ -1,0 +1,7 @@
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -W 02:00
+#BSUB -o  /home/users/mjones07/tds_testing/comparing_fileServer/log
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+mpirun.lotus /home/users/mjones07/tds_testing/comparing_fileServer/run_test.py
